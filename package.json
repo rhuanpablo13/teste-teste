@@ -1,0 +1,20 @@
+{
+  "name": "heron-list",
+  "version": "1.0.0",
+  "description": "Mono repo do projeto heron-list",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "postinstall": "npm run postinstall-api && npm run postinstall-web",
+    "postinstall-api": "cd packages/api && npm install && npm num build && sh deploy-web.sh",
+    "postinstall-web": "cd packages/web && npm install"
+  },
+  "author": "Andressa Noaves <isa.desenvolvimento@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/i-zzaa/heron-list#readme"
+}

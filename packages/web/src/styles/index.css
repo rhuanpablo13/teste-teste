@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+/* *[role="dialog"] {
+  height: 100vh !important;
+} */
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: #675dc4 !important;
+  border-color: transparent !important;
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: fieldtext !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* .inputAnimado{
+  width: 100%;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 2px #d1d5db;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #675dc4 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #675dc4 4%);
+  background-position: -800px 0;
+  background-size: 4 100%;
+  background-repeat: no-repeat;
+  color: 'gray'  ;
+}
+
+.inputAnimado:focus, .inputAnimado:valid {
+ box-shadow: none;
+ outline: none;
+ background-position: 0 0;
+}
+
+.inputAnimado::-webkit-input-placeholder {
+ -webkit-transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
+}
+
+.inputAnimado:focus::-webkit-input-placeholder, .inputAnimado:valid::-webkit-input-placeholder {
+ font-size: 11px;
+ -webkit-transform: translateY(-20px);
+ transform: translateY(-20px);
+ visibility: visible !important;
+} */
+
+
+.label-float {
+  position: relative;
+  padding-top: 18px;
+}
+
+/* .searchBox :not([type="checkbox"]) */
+.label-float input,
+select,
+textarea {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-appearance: none;
+}
+
+.searchBox {
+  border-radius: 5px;
+  outline: none;
+  width: inherit !important;
+  font-size: 16px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-appearance: none !important;
+}
+
+.checkbox {
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+}
+
+.label-float input:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid #675dc4;
+}
+
+.label-float input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: transparent;
+}
+
+.label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 15px;
+  transition: all .1s linear;
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  background-color: white;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+/* input:required:invalid + label, select:required:invalid + label{
+  color: red;
+}
+input:focus:required:invalid{
+  border: 2px solid red;
+} */
+input:required:invalid+label:before {
+  content: '*';
+}
+
+.label-float input:focus+label,
+.label-float select:focus+label,
+.label-float textarea:focus+label,
+.label-float :not(:placeholder-shown)+label {
+  font-size: 13px;
+  top: 0;
+  color: #675dc4;
+}
+
+.ellipis {
+  width: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* MultiSelectDemo.css */
+/* 
+.p-multiselect {
+  min-width: 15rem;
+}
+
+.multiselect-demo .multiselect-custom .p-multiselect-label:not(.p-placeholder):not(.p-multiselect-items-label) {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+.multiselect-demo .multiselect-custom .country-item-value {
+  padding: .25rem .5rem;
+  border-radius: 3px;
+  display: flex;
+  margin-right: .5rem;
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+.multiselect-demo .multiselect-custom .country-item-value img.flag {
+  width: 17px;
+} */
+
+.p-multiselect,
+.p-dropdown,
+.p-calendar {
+  display: flex !important;
+}
+
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  padding: 0.375rem 0.75rem;
+  margin-right: 0.5rem;
+  background: #EEF2FF;
+  color: #4338CA;
+  border-radius: 10rem !important;
+}
+
+.p-component {
+  font-family: Raleway, sans-serif !important;
+}
+
+.p-calendar,
+.p-datepicker-calendar {
+  font-family: sans-serif !important;
+}
+
+.dialog-demo .p-button {
+  margin: 0 .5rem 0 0;
+  min-width: 10rem;
+}
+
+.dialog-demo p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dialog-demo .confirmation-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-demo .p-dialog .p-button {
+  min-width: 6rem;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 1rem;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5b21b6;
+}
